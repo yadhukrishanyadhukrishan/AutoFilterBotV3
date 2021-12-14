@@ -45,14 +45,14 @@ async def start(bot, message):
                 ident, file_id = message.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=message.from_user.id,
-                    text="**Please Join My Updates Channel to use this Bot!**",
+                    text="**നിങ്ങൾ ആവിശ്യപ്പെട്ട സിനിമ ലഭിക്കുന്നതായി നിങ്ങൾ ഞങ്ങളുടെ MALLU MOVIE UPDATES🎥 ചാനലിൽ ജോയിൻ ചെയ്യണം**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
+                                InlineKeyboardButton("👉 ചാനലിൽ ജോയിൻ👈Join My Updates Channel ", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton("🔄 Try Again", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton("ശേഷം  🔁 REFRESH", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
@@ -99,11 +99,11 @@ async def start(bot, message):
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         await bot.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**നിങ്ങൾ ആവിശ്യപ്പെട്ട സിനിമ ലഭിക്കുന്നതായി നിങ്ങൾ ഞങ്ങളുടെ MALLU MOVIE UPDATES🎥 ചാനലിൽ ജോയിൻ ചെയ്യണം!**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
+                        InlineKeyboardButton("📢 ചാനലിൽ ജോയിൻ Join My Updates Channel 📢", url=invite_link.invite_link)
                     ]
                 ]
             )
@@ -114,11 +114,11 @@ async def start(bot, message):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[
-                InlineKeyboardButton("Search Here", switch_inline_query_current_chat='')
+                [
+               
                 ],[
-                InlineKeyboardButton("Help", callback_data="help"),
-                InlineKeyboardButton("About", callback_data="about")
+               
+                
                 ]]
             )
         )
